@@ -6,13 +6,13 @@ const express = require('express');
 const app = express();
 const port = 5000; // Corrected port number
 
-app.use(cors());
-// app.use(cors({
-//   origin: ["https://mern-notes-app-za97.vercel.app/"],
-//   methods:["POST","GET","PUT","DELETE"],
-//   credentials:true
-//   // Replace with your allowed origin(s)
-// }));
+const corsConfig={
+  origin:"*",
+  methods:["POST","GET","PUT","DELETE"],
+  credentials:true
+};
+app.options("",cors(corsConfig));
+app.use(cors(corsConfig));
 app.use(express.json());
 app.use('/api/auth', require('./Routes/auth.js'));
 app.use('/api/notes', require('./Routes/notes.js'));
