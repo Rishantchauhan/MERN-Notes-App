@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router';
 function SignUp(props) {
   let navi = useNavigate();
   const handlesubmit=async(e)=>{
-    var url="https://mern-notes-app-delta.vercel.app/";
+    var url="http://localhost:5000";
     e.preventDefault();
     let email1=document.getElementById('InputEmail').value;
     let password1=document.getElementById('InputPassword').value;

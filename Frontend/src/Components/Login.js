@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router';
 
 
 function Login(props) {
-    var url="https://mern-notes-app-delta.vercel.app/";
+    var url="http://localhost:5000";
     let navi = useNavigate();
     // const {showalert}=useContext(notecontext);
     const handlesubmit=async(e)=>{

@@ -4,7 +4,6 @@ import notecontext from "../Context/Notes/NoteContext";
 import NoteItem from "./NoteItem";
 
 function Notes() {
-  var val="d-none";
   const a = useContext(notecontext);
   const {notes,getallnotes,editnote} = a;
   useEffect(() => {
