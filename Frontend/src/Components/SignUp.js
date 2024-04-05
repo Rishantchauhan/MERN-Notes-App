@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router';
 function SignUp(props) {
   let navi = useNavigate();
   const handlesubmit=async(e)=>{
+    var url="https://mern-notes-app-delta.vercel.app/";
     e.preventDefault();
     let email1=document.getElementById('InputEmail').value;
     let password1=document.getElementById('InputPassword').value;
@@ -10,7 +11,7 @@ function SignUp(props) {
     console.log(email1);
     console.log(name1);
     console.log(password1);
-    const response = await fetch("http://localhost:5000/api/auth/createuser", {
+    const response = await fetch(`${url}/api/auth/createuser`, {
         method: "POST", 
         headers: {
           "Content-Type": "application/json"

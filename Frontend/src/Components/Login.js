@@ -4,13 +4,14 @@ import { useNavigate } from 'react-router';
 
 
 function Login(props) {
+    var url="https://mern-notes-app-delta.vercel.app/";
     let navi = useNavigate();
     // const {showalert}=useContext(notecontext);
     const handlesubmit=async(e)=>{
         e.preventDefault();
         let email1=document.getElementById('inputEmail').value;
         let password1=document.getElementById('inputPassword').value;
-        const response = await fetch("http://localhost:5000/api/auth/login", {
+        const response = await fetch(`${url}/api/auth/login`, {
             method: "POST", 
             headers: {
               "Content-Type": "application/json"
