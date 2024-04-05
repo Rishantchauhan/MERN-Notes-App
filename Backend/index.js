@@ -22,3 +22,4 @@ app.listen(port, () => {
 });
 
 ConnectToMongoose();
+module.exports = app;
