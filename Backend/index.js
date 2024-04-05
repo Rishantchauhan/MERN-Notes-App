@@ -13,10 +13,13 @@ const corsConfig={
 };
 app.options("",cors(corsConfig));
 app.use(cors(corsConfig));
+<<<<<<< HEAD
 // app.use(cors({
 //   
 //   // Replace with your allowed origin(s)
 // }));
+=======
+>>>>>>> 1351fe56916b4ae85f5e10abcbcdb118a3f94907
 app.use(express.json());
 app.use('/api/auth', require('./Routes/auth.js'));
 app.use('/api/notes', require('./Routes/notes.js'));

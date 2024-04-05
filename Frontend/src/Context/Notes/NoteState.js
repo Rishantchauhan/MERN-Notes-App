@@ -4,7 +4,7 @@ import { useState } from 'react';
 
 
 const NoteState=(props)=>{
-     const host="https://mern-notes-app-delta.vercel.app/";
+     const host="http://localhost:5000";
      const token=localStorage.getItem('token');
     const ini_notes = [];
     const [notes, setnotes]=useState(ini_notes);
