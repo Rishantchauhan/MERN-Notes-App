@@ -1,32 +1,10 @@
 {
-  "version": 2,
-  "builds": [
-<<<<<<< HEAD
-  {
-  "src": "./index.js",
-  "use": "@vercel/node"
-  }
-  ],
-  "routes": [
-  {
-  "src": "/(.*)",
-  "dest": "",
-  "methods": ["GET","POST","PUT","PATCH","DELETE","OPTIONS"]
-  }
-  ]
-  }
-=======
-    {
-      "src": "/index.js",
-      "use": "@vercel/node"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/",
-      "methods": ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"]
-    }
-  ]
+   "version": 2,
+   "name": "Notebook",
+   "builds": [
+      { "src": "app.js", "use": "@vercel/node" }
+   ],
+   "routes": [
+      { "src": "/(.*)", "dest": "/app.js" }
+   ]
 }
->>>>>>> 1351fe56916b4ae85f5e10abcbcdb118a3f94907
